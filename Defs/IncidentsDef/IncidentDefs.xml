@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<IncidentDef>
+		<defName>NP_NakedManhunt</defName>
+		<label>Naked People</label>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>NakedManhunt.IncidentWorker_NakedManhunt</workerClass>
+		<category>ThreatBig</category>
+		<baseChance>2.6</baseChance>
+		<minRefireDays>30</minRefireDays>
+		<earliestDay>20</earliestDay>
+	  </IncidentDef>
+  </Defs>
