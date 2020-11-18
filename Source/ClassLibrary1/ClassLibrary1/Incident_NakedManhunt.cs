@@ -4,7 +4,6 @@ using System.Linq;
 using RimWorld;
 using Verse;
 
-
 namespace NakedManhunt
 {
     public class IncidentWorker_NakedManhunt : IncidentWorker
@@ -14,7 +13,7 @@ namespace NakedManhunt
         {
             Map map = (Map)parms.target;
             Pawn NakedPawn = null;
-            PawnKindDef NakedPawnKindDef = PawnKindDef.Named("WildMan");
+            PawnKindDef NakedPawnKindDef = PawnKindDef.Named("NakedPeople");
             bool flag = NakedPawnKindDef == null;
             bool flag2 = flag;
             bool result;
@@ -59,7 +58,6 @@ namespace NakedManhunt
                         GenSpawn.Spawn(NakedPawn, intVec2, map, rot, WipeMode.Vanish, false);
                         NakedPawn.needs.food.CurLevel = 0.01f;
                         NakedPawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ManhunterPermanent, null, false, false, null, false);
-                        //PawnInventoryGenerator.GiveGoJuice(p);
                         NakedPawn.mindState.exitMapAfterTick = Find.TickManager.TicksGame + Rand.Range(90000, 130000);
                         num2 = i;
                     }
